@@ -1,0 +1,399 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000;
+            /* IMPORTANT: Replace with the path to YOUR background image */
+            background: url('/images/black-screen_39.png') no-repeat center center fixed ;
+            background-size: cover;
+            color: #E5E7EB; /* Default light gray text */
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        /* Custom class for the semi-transparent "glass" cards */
+        .glass-card {
+            background-color: rgba(17, 24, 39, 0.5); /* bg-gray-900 with 50% opacity */
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(55, 65, 81, 0.7); /* border-gray-700 with 70% opacity */
+        }
+
+        /* Custom styles for the scroll animation */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .scroll-reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+  }
+
+  .scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .landing-effect {
+    animation: landingFade 1.2s ease-out forwards;
+  }
+
+          @keyframes scroll {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* Class to apply the animation. Duration increased for more items. */
+        .animate-marquee {
+            animation: scroll 75s linear infinite;
+        }
+
+  @keyframes landingFade {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .hex-card {
+        width: 120px;
+        height: 104px;
+        background-color: #f0f2f6; /* dark slate */
+        color: rgb(0, 0, 0);
+        clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+      }
+
+              .custom-role-line {
+            background: linear-gradient(90deg, #8A2BE2, #FF1493);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+
+      .hex-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 25px rgba(255, 0, 0, 0.993);
+      }
+
+      .hex-card .icon {
+        font-size: 1.5rem;
+        margin-bottom: 0.2rem;
+      }
+
+      .hex-card p {
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+      }
+
+      @media (max-width: 640px) {
+        .hex-card {
+          width: 90px;
+          height: 80px;
+        }
+        .hex-card .icon {
+          font-size: 1.2rem;
+        }
+        .hex-card p {
+          font-size: 0.65rem;
+        }
+      }
+
+      .stroke-text {
+        -webkit-text-stroke: 1px white;
+      }
+
+      .custom-role-line {
+        font-family: "Raleway", sans-serif;
+        font-weight: 800;
+        font-size: 25px;
+        color: #909090;
+        letter-spacing: 0;
+      }
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes bounce-slow {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-4px);
+        }
+      }
+
+      .animate-fade-in {
+        animation: fade-in 0.6s ease-out forwards;
+      }
+
+      .hover\:animate-bounce-slow:hover {
+        animation: bounce-slow 0.4s ease-out;
+      }
+      @keyframes slideIn {
+        0% {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      .animate-slideIn {
+        animation: slideIn 0.8s ease-out forwards;
+      }
+      /* marquie */
+      @keyframes marquee {
+        0% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      .animate-marquee {
+        animation: scroll 75s linear infinite;
+        display: flex;
+      }
+      .gradient-button {
+    background-image: linear-gradient(30deg, #0400ff, #4ce3f7);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    display: inline-block;
+  }
+
+  .gradient-button:hover {
+    background-position: right center;
+    background-size: 200% auto;
+    animation: pulse512 1.5s infinite;
+  }
+
+  @keyframes pulse512 {
+    0% {
+      box-shadow: 0 0 0 0 #05bada66;
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(218, 103, 68, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(218, 103, 68, 0);
+    }
+  }
+  .wrapper {
+    display : flex;
+    justify-content: flex-start;
+    list-style: none;
+    height: 120px;
+    width: 100%;
+    padding-top: 40px;
+  }
+
+  .wrapper .icon {
+    position: relative;
+    background: #fff;
+    border-radius: 50%;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #fff;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .wrapper .icon:hover span,
+  .wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Hover styles per icon */
+  .wrapper .linkedin:hover,
+  .wrapper .linkedin:hover .tooltip,
+  .wrapper .linkedin:hover .tooltip::before {
+    background: #0077b5;
+    color: #fff;
+  }
+
+  .wrapper .github:hover,
+  .wrapper .github:hover .tooltip,
+  .wrapper .github:hover .tooltip::before {
+    background: #333;
+    color: #fff;
+  }
+
+  .wrapper .instagram:hover,
+  .wrapper .instagram:hover .tooltip,
+  .wrapper .instagram:hover .tooltip::before {
+    background: #e4405f;
+    color: #fff;
+  }
+
+  /* Optional: SVG transition */
+  .wrapper .icon svg {
+    transition: fill 0.3s ease;
+  }
+
+  .wrapper .linkedin:hover svg,
+  .wrapper .github:hover svg,
+  .wrapper .instagram:hover svg {
+    fill: #fff;
+  }
+
+   .card {
+            /* FIX: Added 'transform' to the transition to ensure smooth centering animation. */
+            transition: top 0.4s ease-in-out, left 0.4s ease-in-out, width 0.4s ease-in-out, height 0.4s ease-in-out, transform 0.4s ease-in-out;
+        }
+
+        .card.selected {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 90vw;
+            height: 80vh;
+            max-width: 600px;
+            max-height: 700px;
+            transform: translate(-50%, -50%) scale(1);
+            z-index: 50;
+            cursor: default;
+            pointer-events: auto;
+            overflow: hidden;
+             transition: all 0.4s ease;
+             border-radius: 1rem;
+        }
+
+        .selected-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem;
+            color: white;
+            z-index: 70;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.4s ease-out 0.2s, transform 0.4s ease-out 0.2s;
+        }
+
+        .card.selected .selected-content {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .overlay {
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            opacity: 0;
+            z-index: 40;
+            pointer-events: none;
+            transition: opacity 0.4s ease-in-out;
+        }
+
+        .overlay.active {
+            opacity: 0.7;
+            pointer-events: auto;
+        }
+        
+        .selected-content-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            z-index: 60;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        
+        .card.selected .selected-content-bg {
+            opacity: 1;
+        }
+
+            .glass-card {
+            background-color: rgba(17, 24, 39, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(55, 65, 81, 0.7);
+        }
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .scroll-reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
