@@ -12,6 +12,11 @@ html {
             scroll-behavior: smooth;
             overflow-x: hidden;
         }
+        /* Smooth hide by translating header out of view */
+.header--hidden {
+  transform: translateY(-100%);
+}
+
         /* Horizontal scroll */
         /* The element that gets pinned to the top */
         .gallery-pinner {
@@ -441,3 +446,19 @@ html {
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* Ensure the Vanta canvas never triggers horizontal scroll */
+#vanta-globe, #vanta-globe > canvas {
+  width: 100% !important;
+  max-width: 100% !important;
+  display: block;
+}
+
+/* Optional: tone down default list styles if your .wrapper relies on custom visuals */
+.wrapper { list-style: none; padding: 0; margin: 0; }
+
+/* If your gradient-button is custom CSS, keep it responsive */
+.gradient-button { background: linear-gradient(90deg, #7c3aed, #1a73e8); }
+
+/* Make sure any absolutely positioned shapes don't overflow */
+.landing-effect { position: relative; }
