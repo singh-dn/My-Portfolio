@@ -12,7 +12,36 @@ html {
             scroll-behavior: smooth;
             overflow-x: hidden;
         }
+        /* Horizontal scroll */
+        /* The element that gets pinned to the top */
+        .gallery-pinner {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden; /* Crucial to hide the off-screen panels */
+        }
 
+        /* The track that moves horizontally */
+        .gallery-track {
+            display: flex;
+            align-items: center; /* Vertically center the panels */
+            height: 100%;
+            /* Add a gap between the panels */
+            gap: 2rem; /* 32px */
+            /* Add padding so the first/last panels aren't flush against the viewport edges */
+            padding: 0 2rem;
+        }
+
+        /* Styling for individual panels */
+        .gallery-panel {
+            width: 80vw; /* Make panels smaller than the viewport width */
+            height: 80vh; /* Adjust height for a pleasing aspect ratio */
+            flex-shrink: 0; /* Prevents panels from shrinking */
+            border-radius: 1.5rem; /* Rounded corners for the "box" */
+            overflow: hidden; /* Ensures the image inside respects the rounded corners */
+            background-color: #374151; /* A fallback background color */
+        }
         /* Custom class for the semi-transparent "glass" cards */
         .glass-card {
             background-color: rgba(17, 24, 39, 0.5); /* bg-gray-900 with 50% opacity */
