@@ -48,20 +48,23 @@ html {
 
         /* Styling for individual panels */
         .gallery-panel {
-            width: 80vw; /* Make panels smaller than the viewport width */
-            height: 80vh; /* Adjust height for a pleasing aspect ratio */
+   /* Adjust height for a pleasing aspect ratio */
             flex-shrink: 0; /* Prevents panels from shrinking */
             border-radius: 1rem; /* Rounded corners for the "box" */
             overflow: hidden; /* Ensures the image inside respects the rounded corners */
             background-color: #374151; /* A fallback background color */
         }
-        @media (min-width: 768px) { /* md breakpoint */
-    .gallery-panel {
-        width: 80vw;
-        height: 80vh;
-        border-radius: 1.5rem;
-    }
-}
+
+
+
+        /* --- KEY CHANGE HERE --- */
+        /* We style the image directly to control its size and appearance */
+        .gallery-image {
+            height: 80vh; /* This defines the size of the certificate */
+            width: auto;   /* Width will adjust to maintain aspect ratio */
+            border-radius: 1rem; /* Rounded corners are applied directly to the image */
+            display: block; /* Ensures proper block-level behavior */
+        }
         /* Custom class for the semi-transparent "glass" cards */
         .glass-card {
             background-color: rgba(17, 24, 39, 0.5); /* bg-gray-900 with 50% opacity */

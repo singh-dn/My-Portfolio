@@ -95,7 +95,7 @@
        <ul class="flex justify-center md:justify-start gap-5 mt-6">
       <!-- LinkedIn -->
       <li>
-        <a href="www.linkedin.com/in/dev-singh-53a393377" target="_blank" class="block hover:scale-110 transition-transform">
+        <a href="https://www.linkedin.com/in/singhdn?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="block hover:scale-110 transition-transform">
           <svg xmlns="http://www.w3.org/2000/svg" height="1.8em" viewBox="0 0 448 512" class="fill-white hover:fill-blue-400">
            <path
                 d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 
@@ -313,15 +313,15 @@
 
                 <!-- Section 1: My Projects -->
                 <section class="scroll-reveal">
-                    <h2 class="text-2xl font-bold tracking-widest text-white mb-6">Currently Working </h2>
+                    <h2 class="text-2xl font-bold tracking-widest text-white mb-6">Currently Working On </h2>
                     <div class="inline-block">
                         <div class="bg-gray-800 p-3 rounded-lg max-w-xs">
-                            <img src="https://placehold.co/300x200/1a202c/FFFFFF?text=Project+Screenshot" 
+                            <img src="/images/studyScrbe.webp" 
                                  alt="Project Screenshot" 
                                  class="w-full h-auto rounded-md object-cover">
                             <div class="mt-3">
                                 <span class="text-xs bg-red-600 text-white font-bold py-1 px-2 rounded">Education SITE</span>
-                                <h3 class="text-white font-bold mt-2">Modern Web page</h3>
+                                <h3 class="text-white font-bold mt-2">Minimalist & Professional Project</h3>
                                 <p class="text-gray-400 text-sm">React, Node.js, Tailwind</p>
                             </div>
                         </div>
@@ -395,7 +395,7 @@
         </div>
     </div>
 
-<div class="scroll-reveal">  
+
 <!-- Certifications Gallery Section -->
 <section id="certifications" class="w-full bg-back py-20 px-6 text-black">
   <div class="max-w-7xl mx-auto">
@@ -412,7 +412,7 @@
     <!-- Overlay for background dimming -->
     <div id="overlay" class="overlay"></div>
 </section>
-</div>
+
 
 <div class="scroll-reveal">
     <!-- ▼▼▼ NEW PORTFOLIO CONTENT START ▼▼▼ -->
@@ -542,44 +542,45 @@
         </div>
       </div>
     </div>
-        <footer class="h-screen bg-BLACK flex items-center justify-center">
-      <h2 class="text-4xl font-bold text-white">Content After Parallax</h2>
-    </footer>
- <!-- Section 2: The Horizontal Scroll Container -->
+        <section class="h-screen flex items-center justify-center">
+        <h1 class="text-5xl font-bold text-center">Scroll Down</h1>
+    </section>
+
+    <!-- Section 2: The Horizontal Scroll Container -->
+    <!-- This section now correctly comes BEFORE the footer -->
     <section class="scroll-gallery-container relative">
-        <!-- This is the element that will be "pinned" to the top of the viewport. -->
         <div class="gallery-pinner">
-            <!-- This track holds the panels and will be moved horizontally. -->
             <div class="gallery-track">
                 
                 <!-- Panel 1 -->
                 <div class="gallery-panel">
-                    <img src="https://placehold.co/1600x900/fecdd3/be123c?text=Image+1" alt="Abstract pink shapes" class="w-full h-full object-cover">
+                    <img src="/Coursera Certification/agile and scrum.png" alt="DevOps, Cloud, and Agile Foundations" class="gallery-image">
                 </div>
 
                 <!-- Panel 2 -->
                 <div class="gallery-panel">
-                     <img src="https://placehold.co/1600x900/c7d2fe/4338ca?text=Image+2" alt="Abstract indigo shapes" class="w-full h-full object-cover">
+                     <img src="/Coursera Certification/devopsintro.png" alt="Abstract indigo shapes" class="gallery-image">
                 </div>
 
                 <!-- Panel 3 -->
                 <div class="gallery-panel">
-                     <img src="https://placehold.co/1600x900/99f6e4/047857?text=Image+3" alt="Abstract teal shapes" class="w-full h-full object-cover">
+                     <img src="/Coursera Certification/cloudcomputing.png" alt="Abstract teal shapes" class="gallery-image">
                 </div>
 
                 <!-- Panel 4 -->
                 <div class="gallery-panel">
-                     <img src="https://placehold.co/1600x900/fde68a/b45309?text=Image+4" alt="Abstract amber shapes" class="w-full h-full object-cover">
+                     <img src="/Coursera Certification//Coursera JYHK8ZD9XSFM.png" alt="Abstract amber shapes" class="gallery-image">
                 </div>
                 
-                <!-- You can easily add more panels here -->
+                <!-- Panel 5 -->
                  <div class="gallery-panel">
-                     <img src="https://placehold.co/1600x900/d9f99d/4d7c0f?text=Image+5" alt="Abstract lime shapes" class="w-full h-full object-cover">
+                     <img src="/Coursera Certification/linux.png" alt="Abstract lime shapes" class="gallery-image">
                 </div>
 
             </div>
         </div>
-    </section>
+    </section><br><br>
+
                                
 <div class="scroll-reveal">
 <!-- Contact Section -->
@@ -779,34 +780,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
     <script>
-        // Wait for the document to be fully loaded before running the script
         document.addEventListener("DOMContentLoaded", function() {
-            
-            // Register the ScrollTrigger plugin with GSAP
             gsap.registerPlugin(ScrollTrigger);
-
             const track = document.querySelector(".gallery-track");
 
-            // --- GSAP Animation ---
-            // This setup creates a horizontal scroll effect based on the width of the track.
             gsap.to(track, {
-                // Move the track horizontally. The amount is the total width of the track
-                // minus the width of the viewport.
                 x: () => -(track.scrollWidth - document.documentElement.clientWidth) + "px",
-                ease: "none", // No easing for a direct 1:1 scroll correlation
+                ease: "none",
                 scrollTrigger: {
-                    trigger: ".scroll-gallery-container", // The element that starts the animation
-                    start: "top top", // When the top of the trigger hits the top of the viewport
-                    // The end point is calculated based on the track's width. This makes the scroll
-                    // duration feel natural, regardless of how many panels there are.
+                    trigger: ".scroll-gallery-container",
+                    start: "top top",
                     end: () => "+=" + (track.scrollWidth - document.documentElement.clientWidth),
-                    scrub: true, // Smoothly links the animation progress to the scrollbar position
-                    pin: true, // Pins the trigger element during the animation
-                    anticipatePin: 1, // Helps prevent jumps at the start of pinning
-                    invalidateOnRefresh: true // Recalculates values on window resize
+                    // THE FIX: Changed from `true` to `1`. This adds a 1-second smoothing effect.
+                    scrub: 1, 
+                    pin: true,
+                    anticipatePin: 1,
+                    invalidateOnRefresh: true
                 }
             });
-
         });
     </script>
   <script>
